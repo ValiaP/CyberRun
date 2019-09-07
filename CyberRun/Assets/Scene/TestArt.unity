@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 1447201469}
   - component: {fileID: 1447201468}
   m_Layer: 0
-  m_Name: this was a chines name before
+  m_Name: testing push
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
