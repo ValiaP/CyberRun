@@ -150,9 +150,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4127971842158942071, guid: 49cb2d5143972df43b1b9fd988404087, type: 3}
-  spawnPos: {x: 0, y: 0, z: -100}
+  spawnPos: {x: 0, y: 0.5, z: 100}
   spawnPosXoffset: 0.7
-  timeOffset: 0.5
+  timeOffset: 1
+  coinSpeed: -10
 --- !u!4 &567169803
 Transform:
   m_ObjectHideFlags: 0
@@ -345,8 +346,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229144686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0, z: 22}
+  m_LocalPosition: {x: 0, y: 0, z: 44}
+  m_LocalScale: {x: 0.25, y: 0, z: 12}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
