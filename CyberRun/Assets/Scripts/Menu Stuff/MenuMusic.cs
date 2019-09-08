@@ -7,20 +7,14 @@ public class MenuMusic : MonoBehaviour
     //notmanyideas, ask me whats wrong (i hope nothing)
 
     public AudioClip clickSFX;
-    public AudioClip menuTheme;
 
     void Awake()
     {
-        PlayTheme();
+        DontDestroyOnLoad(gameObject);
     }
 
-    void PlayTheme()
+    void Start()
     {
-        AudioSource.PlayClipAtPoint(menuTheme, Camera.main.transform.position);
-    }
-
-    public void PlayClick()
-    {
-        AudioSource.PlayClipAtPoint(clickSFX, Camera.main.transform.position);
+        clickSFX = gameObject.GetComponent<AudioSource>().Clip;      
     }
 }
