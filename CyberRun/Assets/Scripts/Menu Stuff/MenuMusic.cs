@@ -15,6 +15,6 @@ public class MenuMusic : MonoBehaviour
 
     void Start()
     {
-        clickSFX = gameObject.GetComponent<AudioSource>().Clip;      
+        clickSFX = gameObject.GetComponent<AudioSource>().clip;      
     }
 }
