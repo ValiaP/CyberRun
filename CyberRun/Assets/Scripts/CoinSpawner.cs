@@ -26,21 +26,6 @@ public class CoinSpawner : MonoBehaviour
 
     void Spawn()
     {
-        /*  int lane = Random.Range(-2, 2);
-          switch(lane)
-          {
-              case 1:
-                  spawnPosXoffset *= 1;
-                  break;
-              case 0:
-                  spawnPosXoffset = 0;
-                  break;
-              case -1:
-                  spawnPosXoffset *= -1;
-                  break;
-          }*/
-
-
         int lane = Random.Range(-1, 1);
         Debug.Log(lane);
         if (lane == -1)
@@ -51,8 +36,6 @@ public class CoinSpawner : MonoBehaviour
         {
             spawnPosXoffset = 0;
         }
-
-
         spawnPos.x = spawnPosXoffset;
         GameObject coin = Instantiate(prefab, spawnPos, Quaternion.identity);
         rb = coin.GetComponent<Rigidbody>();
