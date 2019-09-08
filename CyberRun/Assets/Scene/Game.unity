@@ -650,6 +650,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundPrefab: {fileID: 7423111660445636725, guid: 52e2475e7c07ff04993a47abdba6e61e,
     type: 3}
+  mountainPrefab: {fileID: 4711553834744829757, guid: 0087d2ea594ae0343bcef284d491c41c,
+    type: 3}
   groundSpeed: -10
   timeOffset: 10
 --- !u!1 &1472604356
