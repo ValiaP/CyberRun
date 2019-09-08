@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: c4de7ad842514924eb633d9e352089cd
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Kiona
+  fontNames:
+  - Kiona
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6fecf8808a29d9c4e9aaec24b8fb6438, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
