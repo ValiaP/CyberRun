@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CoinSpawner : MonoBehaviour
 {
-    //@Amazur / Mee6
+    //@Amazur / Mee6, NotManyIdeas;
     //To do:
     //Generate X coins in a row where X random
     //After X coins generate obstacle prefab
@@ -13,7 +13,7 @@ public class CoinSpawner : MonoBehaviour
 
     public GameObject prefab; //coin prefab
     public Vector3 spawnPos; //spawning position of the coin
-    public float spawnPosXoffset = 0.8f; //offset of the X of the coin - "which lane it spawns on"
+    float[] xLane = new float[] { -1, 0, 1 }; // array of x positions
     public float timeOffset = 0.5f; //during what time it spawns
     public float coinSpeed = 1f; //speed of the coin
 
@@ -26,17 +26,7 @@ public class CoinSpawner : MonoBehaviour
 
     void Spawn()
     {
-        int lane = Random.Range(-1, 1);
-        Debug.Log(lane);
-        if (lane == -1)
-        {
-            spawnPosXoffset = -spawnPosXoffset;
-        }
-        else
-        {
-            spawnPosXoffset = 0;
-        }
-        spawnPos.x = spawnPosXoffset;
+        spawnPos.x = xLane[Random.Range(0, 3)]; //random x pos
         GameObject coin = Instantiate(prefab, spawnPos, Quaternion.identity);
         rb = coin.GetComponent<Rigidbody>();
         rb.velocity = new Vector3(0, 0, coinSpeed); //give velocity to coin
