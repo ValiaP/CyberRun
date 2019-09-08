@@ -4,26 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ClickManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public AudioClip click;
 
     public void ChangeSceneToGame()
     {
-        
-        SceneManager.LoadScene("Game");
+        AudioSource.PlayClipAtPoint(click, gameObject.transform.position);
 
+        SceneManager.LoadScene("Game");
     }
     public void Quit()
     {
+        AudioSource.PlayClipAtPoint(click, gameObject.transform.position, 2f);
         Application.Quit();
     }
 }

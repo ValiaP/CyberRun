@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -288,6 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 131619047}
   - component: {fileID: 131619046}
+  - component: {fileID: 131619048}
   m_Layer: 0
   m_Name: ClickManager
   m_TagString: Untagged
@@ -307,6 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6537cfbfd7b71064f940ab8f93a1591f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  click: {fileID: 8300000, guid: bb60cb0b6c3ebc14eac8476d00c65370, type: 3}
 --- !u!4 &131619047
 Transform:
   m_ObjectHideFlags: 0
@@ -315,12 +317,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131619045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 477.99997, y: 359.62085, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &131619048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131619045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ef32b38c2a924418753d250dd10608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &662724650
 GameObject:
   m_ObjectHideFlags: 0
