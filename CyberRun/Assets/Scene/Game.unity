@@ -212,7 +212,7 @@ RectTransform:
   m_Children:
   - {fileID: 1040487627}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 4127971842158942071, guid: 49cb2d5143972df43b1b9fd988404087,
     type: 3}
-  obstaclePrefab: {fileID: 904144032218463583, guid: 72fd98fa07665584983e51aa8871019f,
+  obstaclePrefab: {fileID: 3003275936763619657, guid: c741a42c06f0bf24ab138db4cf76bf97,
     type: 3}
   emptyPrefab: {fileID: 9131401038521362379, guid: 775c02bd51934a541937b1eb527098cd,
     type: 3}
@@ -1178,7 +1178,7 @@ PrefabInstance:
     - target: {fileID: 5486868791598774117, guid: b55a5d7fe0099df4f860e42d368e8161,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5486868791598774117, guid: b55a5d7fe0099df4f860e42d368e8161,
         type: 3}
