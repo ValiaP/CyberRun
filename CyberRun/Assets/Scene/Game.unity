@@ -246,7 +246,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 866b7f6f4a9ee614097c121223f939ba, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9f444876d711551499ed838640e384ba, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.489
   m_Pitch: 1
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 567169803}
   - component: {fileID: 567169802}
   m_Layer: 0
-  m_Name: CoinSpawner
+  m_Name: ObjSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,10 +375,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ffd907469578c945a812149897e9604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4127971842158942071, guid: 49cb2d5143972df43b1b9fd988404087, type: 3}
+  coinPrefab: {fileID: 4127971842158942071, guid: 49cb2d5143972df43b1b9fd988404087,
+    type: 3}
+  obstaclePrefab: {fileID: 904144032218463583, guid: 72fd98fa07665584983e51aa8871019f,
+    type: 3}
+  emptyPrefab: {fileID: 9131401038521362379, guid: 775c02bd51934a541937b1eb527098cd,
+    type: 3}
   spawnPos: {x: 0, y: 0.5, z: 100}
   timeOffset: 1
-  coinSpeed: -10
+  speed: -10
 --- !u!4 &567169803
 Transform:
   m_ObjectHideFlags: 0
