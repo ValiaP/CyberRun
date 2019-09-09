@@ -32,7 +32,7 @@ Material:
     - Vector1_55EBB466: 0.05
     - Vector1_60F5A469: 5
     - Vector1_7ED0A5C0: 3.7
-    - Vector1_B482A539: 30
+    - Vector1_B482A539: 10
     m_Colors:
     - Color_B4C79904: {r: 0, g: 0, b: 0, a: 0}
     - Color_B8132921: {r: 0.439855, g: 0.8440461, b: 2.983881, a: 0}
