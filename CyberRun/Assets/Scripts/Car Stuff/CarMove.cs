@@ -8,7 +8,6 @@ public class CarMove : MonoBehaviour
     Vector3 trans;
     public int index = 0;
     public float offset = 0.8f;
-
     public Ease Ease = Ease.InOutBounce;
     // Start is called before the first frame update
     void Start()
@@ -25,9 +24,6 @@ public class CarMove : MonoBehaviour
             else
             {
                 MoveLeft();
-                //trans.x -= offset;
-                //gameObject.transform.position = trans;
-                //index--;
             }
             
         }
@@ -38,14 +34,13 @@ public class CarMove : MonoBehaviour
             else
             {
                 MoveRight();
-                //trans.x += offset;
-                //index++;
-                //gameObject.transform.position = trans;
             }
         }
+
+
     }
 
-    void MoveLeft()
+    public void MoveLeft()
     {
         index--;
 
