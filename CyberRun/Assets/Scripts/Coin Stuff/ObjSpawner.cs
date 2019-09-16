@@ -17,7 +17,7 @@ public class ObjSpawner : MonoBehaviour
     public Vector3 spawnPos; //spawning position of the obj
     float[] xLane = new float[] { -1, 0, 1 }; // array of x positions
     public float timeOffset = 0.5f; //during what time it spawns
-    public float speed = 1f; //speed of the obj
+    private float speed = -10; //speed of the obj
 
     float rowAmount; //coins in a row
     Rigidbody rb;

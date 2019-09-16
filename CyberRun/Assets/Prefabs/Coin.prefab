@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c492ab119509ed42a009149f3cede55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 6060184125255807715, guid: abfe12e8c40f8c3478c1a6ee1a6e7491, type: 3}
   coinText: {fileID: 495948904399673357, guid: c78b8a30727804b49b41bbde66ecbf07, type: 3}
   randomPitch: 0
 --- !u!82 &8685476744230883505
