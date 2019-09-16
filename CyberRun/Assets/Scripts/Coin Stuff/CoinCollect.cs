@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityStandardAssets.ImageEffects;
 
 public class CoinCollect : MonoBehaviour
 {
+    public GameObject cam;
+    Fisheye eye;
     AudioSource src;
     AudioClip audioData;
+    public TextMeshProUGUI coinText;
     public bool randomPitch = false;
     //@Mee6
     //Attach to coin prefab
@@ -24,16 +30,15 @@ public class CoinCollect : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        coinText.text = PlayerStats.coinAmount.ToString();
     }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-
             AudioSource.PlayClipAtPoint(audioData, this.gameObject.transform.position);
             Debug.Log("Collision detected");
             PlayerStats.coinAmount++;

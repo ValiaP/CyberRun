@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c492ab119509ed42a009149f3cede55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinText: {fileID: 495948904399673357, guid: c78b8a30727804b49b41bbde66ecbf07, type: 3}
   randomPitch: 0
 --- !u!82 &8685476744230883505
 AudioSource:
@@ -244,11 +245,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8246684957294187599}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b1f62c6d993148e4b8462ada40c21820,
-        type: 3}
-      propertyPath: m_Name
-      value: Coin_Mesh_
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1f62c6d993148e4b8462ada40c21820,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -303,6 +299,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b1f62c6d993148e4b8462ada40c21820,
+        type: 3}
+      propertyPath: m_Name
+      value: Coin_Mesh_
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: b1f62c6d993148e4b8462ada40c21820,
         type: 3}
