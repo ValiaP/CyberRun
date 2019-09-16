@@ -40,15 +40,15 @@ public class CoinCollect : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             AudioSource.PlayClipAtPoint(audioData, this.gameObject.transform.position);
-            Debug.Log("Collision detected");
+            //Debug.Log("Collision detected");
             PlayerStats.coinAmount++;
-            Debug.Log("Coin amount " + PlayerStats.coinAmount);
+            //Debug.Log("Coin amount " + PlayerStats.coinAmount);
             Destroy(gameObject);
             
         }
         if (other.gameObject.CompareTag("Destructor"))
         {
-            Debug.Log("Coin destruction");
+            //Debug.Log("Coin destruction");
             Destroy(gameObject);
         }
     }

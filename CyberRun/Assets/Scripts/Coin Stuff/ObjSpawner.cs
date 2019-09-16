@@ -42,8 +42,8 @@ public class ObjSpawner : MonoBehaviour
             yield return new WaitForSecondsRealtime(1f); //hardcoded :(
             speed -= 0.5f;
             timeOffset = 0.01f;
-            print(timeOffset);
-            print(speed);
+            //print(timeOffset);
+           // print(speed);
         }
     }
 }
