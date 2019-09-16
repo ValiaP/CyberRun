@@ -16,14 +16,14 @@ public class ObjSpawner : MonoBehaviour
     public GameObject emptyPrefab; // empty prefab
     public Vector3 spawnPos; //spawning position of the obj
     float[] xLane = new float[] { -1, 0, 1 }; // array of x positions
-    public float timeOffset = 0.5f; //during what time it spawns
+    float timeOffset = 0.5f; //during what time it spawns
     private float speed = -10; //speed of the obj
 
-    float rowAmount; //coins in a row
     Rigidbody rb;
     void Start()
     {
-        InvokeRepeating("Spawn", 0,timeOffset);
+        InvokeRepeating("Spawn", 0, timeOffset);
+        StartCoroutine(AddDifficulty());
     }
 
     void Spawn()
@@ -32,7 +32,18 @@ public class ObjSpawner : MonoBehaviour
         spawnPos.x = xLane[Random.Range(0, 3)]; //random x pos
         GameObject objClone = Instantiate(objToSpawn[Random.Range(0, 3)], spawnPos, Quaternion.identity);
         rb = objClone.GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(0, 0, speed); //give velocity to obj
-        
+        rb.velocity = new Vector3(0, 0, speed); //give velocity to obj       
+    }
+
+    IEnumerator AddDifficulty()
+    {
+        while (true)
+        {
+            yield return new WaitForSecondsRealtime(1f); //hardcoded :(
+            speed -= 0.5f;
+            timeOffset = 0.01f;
+            print(timeOffset);
+            print(speed);
+        }
     }
 }

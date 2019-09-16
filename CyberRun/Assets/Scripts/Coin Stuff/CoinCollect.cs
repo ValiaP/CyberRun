@@ -3,19 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityStandardAssets.ImageEffects;
+
 
 public class CoinCollect : MonoBehaviour
 {
-    private float shakeDuration = 0f;
-    private float shakeMagnitude = 0.7f;
-    private float dampingSpeed = 1.0f;
-    Vector3 initialPosition;
 
-
-
-    public GameObject cam;
-    private Fisheye eye;
     AudioSource src;
     AudioClip audioData;
     public TextMeshProUGUI coinText;
@@ -25,7 +17,7 @@ public class CoinCollect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        eye = cam.GetComponent<Fisheye>();
+
         src = gameObject.GetComponent<AudioSource>();
         if (randomPitch==true)
         {
@@ -51,7 +43,6 @@ public class CoinCollect : MonoBehaviour
             Debug.Log("Collision detected");
             PlayerStats.coinAmount++;
             Debug.Log("Coin amount " + PlayerStats.coinAmount);
-            StartCoroutine(Fisheye());
             Destroy(gameObject);
             
         }
@@ -62,12 +53,4 @@ public class CoinCollect : MonoBehaviour
         }
     }
 
-    IEnumerator Fisheye()
-    {
-        eye.strengthX = 0.02f;
-        eye.strengthY = 0.02f;
-        yield return new WaitForSeconds(0.1f);
-        eye.strengthX = 0;
-        eye.strengthY = 0;
-    }
 }
