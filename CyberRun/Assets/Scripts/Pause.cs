@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
     public GameObject musicSource;
+    public GameObject canv;
+    public Animator anim;
     AudioSource src;
     bool paused;
     // Start is called before the first frame update
@@ -16,26 +19,22 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        canv.SetActive(paused);
+       
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (paused == false)
             {
-                StartCoroutine(LowPitch());
+                StartCoroutine(LowPitch());                
                 paused = true;
             }
             else
             {
                 StartCoroutine(HighPitch());
                 paused = false;
-
             }
-
-
         }
     }
-
-
-
 
     IEnumerator LowPitch()
     {
