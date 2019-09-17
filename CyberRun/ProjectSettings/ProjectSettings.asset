@@ -576,11 +576,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: Template_Lightweight
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\Amazur\Documents\GitHub\SmartClone\CyberRun\CyberRun\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 80c62cc28d8cd601
   metroApplicationDescription: Template_Lightweight
   wsaImages: {}
   metroTileShortName: 
