@@ -9,6 +9,7 @@ public class CarMove : MonoBehaviour
     public int index = 0;
     public float offset = 0.8f;
     public Ease Ease = Ease.InOutBounce;
+    public GameObject CarDestroy, CarNormal;
     // Start is called before the first frame update
     void Start()
     {

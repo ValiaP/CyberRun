@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class ObstacleHit : MonoBehaviour
 {
     AudioClip audioData;
-
+  
     void Start()
     {
         audioData = GetComponent<AudioSource>().clip;
@@ -17,8 +17,10 @@ public class ObstacleHit : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(audioData, this.gameObject.transform.position);
 
-            Destroy(other.gameObject);
-            StartCoroutine(SlowDown());
+            //Destroy(other.gameObject);
+            other.GetComponent<CarMove>().CarNormal.SetActive(false);
+            other.GetComponent<CarMove>().CarDestroy.SetActive(true);
+            StartCoroutine("SlowDown");
         }
         if (other.gameObject.CompareTag("Destructor"))
         {
@@ -30,8 +32,18 @@ public class ObstacleHit : MonoBehaviour
     {
         while (true)
         {
-            Time.timeScale -= 0.01f;
-            yield return new WaitForSecondsRealtime(0.01f);
+            
+            yield return new WaitForSecondsRealtime(0.1f);
+            
+            if(Time.timeScale >= 0.1f)
+            {
+                Time.timeScale -= 0.1f;
+            }
+            else
+            {
+                Time.timeScale = 0;
+                yield break;
+            }
         }
     }
 }
