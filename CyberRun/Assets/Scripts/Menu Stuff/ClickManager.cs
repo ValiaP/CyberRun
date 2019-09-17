@@ -10,7 +10,7 @@ public class ClickManager : MonoBehaviour
     public void ChangeSceneToGame()
     {
         AudioSource.PlayClipAtPoint(click, gameObject.transform.position);
-
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Game");
     }
     public void Quit()
@@ -21,6 +21,7 @@ public class ClickManager : MonoBehaviour
     public void ChangeSceneToMenu()
     {
         AudioSource.PlayClipAtPoint(click, gameObject.transform.position);
+        Time.timeScale = 1f;
 
         SceneManager.LoadScene("MainMenu");
     }
