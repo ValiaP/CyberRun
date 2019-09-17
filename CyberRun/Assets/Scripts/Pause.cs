@@ -20,12 +20,12 @@ public class Pause : MonoBehaviour
         {
             if (paused == false)
             {
-                PauseGame();
+                StartCoroutine(LowPitch());
                 paused = true;
             }
             else
             {
-                UnPauseGame();
+                StartCoroutine(HighPitch());
                 paused = false;
 
             }
@@ -34,14 +34,34 @@ public class Pause : MonoBehaviour
         }
     }
 
-    void PauseGame()
+
+
+
+    IEnumerator LowPitch()
     {
-        Time.timeScale = 0f;
-        src.pitch = 0.5f;
+        if (!paused)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                src.pitch -= 0.05f;
+                Time.timeScale -= 0.09999f;
+                yield return new WaitForSecondsRealtime(0.1f);
+            }
+
+        }
     }
-    void UnPauseGame()
+
+    IEnumerator HighPitch()
     {
-        Time.timeScale = 1f;
-        src.pitch = 1f;
+        if (paused)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                src.pitch += 0.05f;
+                Time.timeScale += 0.1f;
+                yield return new WaitForSecondsRealtime(0.1f);
+            }
+         
+        }
     }
 }

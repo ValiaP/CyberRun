@@ -5875,7 +5875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1414176525
 Transform:
   m_ObjectHideFlags: 0
@@ -10978,6 +10978,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1303112092}
     m_Modifications:
+    - target: {fileID: 495948904399673359, guid: c78b8a30727804b49b41bbde66ecbf07,
+        type: 3}
+      propertyPath: m_Name
+      value: Coin Counter
+      objectReference: {fileID: 0}
     - target: {fileID: 495948904399673358, guid: c78b8a30727804b49b41bbde66ecbf07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11082,11 +11087,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 495948904399673359, guid: c78b8a30727804b49b41bbde66ecbf07,
-        type: 3}
-      propertyPath: m_Name
-      value: Coin Counter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c78b8a30727804b49b41bbde66ecbf07, type: 3}

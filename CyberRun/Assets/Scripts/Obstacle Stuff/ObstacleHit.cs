@@ -16,29 +16,22 @@ public class ObstacleHit : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             AudioSource.PlayClipAtPoint(audioData, this.gameObject.transform.position);
-            //todo all death stuff;
-            print("obstacle collision");
+
             Destroy(other.gameObject);
-            StartCoroutine(SlowDown());           
+            StartCoroutine(SlowDown());
         }
         if (other.gameObject.CompareTag("Destructor"))
         {
-            Debug.Log("Obstacle Destruction");
             Destroy(gameObject);
         }
     }
 
     IEnumerator SlowDown()
     {
-        while(true)
+        while (true)
         {
-            if (Time.timeScale > 0f)
-            {
-                Time.timeScale -= 0.01f;
-                yield return new WaitForSecondsRealtime(0.01f);
-            }
-            
+            Time.timeScale -= 0.01f;
+            yield return new WaitForSecondsRealtime(0.01f);
         }
-
     }
 }
