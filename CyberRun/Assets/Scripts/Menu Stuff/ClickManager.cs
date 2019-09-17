@@ -18,4 +18,16 @@ public class ClickManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(click, gameObject.transform.position, 2f);
         Application.Quit();
     }
+    public void ChangeSceneToMenu()
+    {
+        AudioSource.PlayClipAtPoint(click, gameObject.transform.position);
+
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void ChangeSceneToCredits()
+    {
+        AudioSource.PlayClipAtPoint(click, gameObject.transform.position);
+
+        SceneManager.LoadScene("Credits");
+    }
 }
