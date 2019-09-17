@@ -406,7 +406,6 @@ MonoBehaviour:
   emptyPrefab: {fileID: 9131401038521362379, guid: 775c02bd51934a541937b1eb527098cd,
     type: 3}
   spawnPos: {x: 0, y: 0.5, z: 100}
-  timeOffset: 1
 --- !u!4 &567169803
 Transform:
   m_ObjectHideFlags: 0
@@ -10979,11 +10978,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1303112092}
     m_Modifications:
-    - target: {fileID: 495948904399673359, guid: c78b8a30727804b49b41bbde66ecbf07,
-        type: 3}
-      propertyPath: m_Name
-      value: Coin Counter
-      objectReference: {fileID: 0}
     - target: {fileID: 495948904399673358, guid: c78b8a30727804b49b41bbde66ecbf07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11088,6 +11082,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 495948904399673359, guid: c78b8a30727804b49b41bbde66ecbf07,
+        type: 3}
+      propertyPath: m_Name
+      value: Coin Counter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c78b8a30727804b49b41bbde66ecbf07, type: 3}

@@ -7,7 +7,7 @@ using TMPro;
 
 public class CoinCollect : MonoBehaviour
 {
-
+    public GameObject particle;
     AudioSource src;
     AudioClip audioData;
     public TextMeshProUGUI coinText;
@@ -43,6 +43,7 @@ public class CoinCollect : MonoBehaviour
             //Debug.Log("Collision detected");
             PlayerStats.coinAmount++;
             //Debug.Log("Coin amount " + PlayerStats.coinAmount);
+            CreateParticle();
             Destroy(gameObject);
             
         }
@@ -51,6 +52,11 @@ public class CoinCollect : MonoBehaviour
             //Debug.Log("Coin destruction");
             Destroy(gameObject);
         }
+    }
+    void CreateParticle()
+    {
+        GameObject firework = Instantiate(particle, gameObject.transform.position, Quaternion.identity);
+        firework.GetComponent<ParticleSystem>().Play();
     }
 
 }
